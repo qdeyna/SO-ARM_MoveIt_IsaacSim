@@ -121,6 +121,31 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
   ros-humble-robot-state-publisher \
   ros-humble-ros2-control \
   ros-humble-ros2-controllers \
+  ros-humble-moveit-ros-move-group \
+  ros-humble-moveit-ros-planning \
+  ros-humble-moveit-ros-planning-interface \
+  ros-humble-moveit-ros-robot-interaction \
+  ros-humble-moveit-ros-occupancy-map-monitor \
+  ros-humble-moveit-simple-controller-manager \
+  ros-humble-moveit-ros-warehouse \
+  ros-humble-moveit-setup-assistant \
+  ros-humble-pilz-industrial-motion-planner \
+  ros-humble-moveit-planners-chomp \
+  ros-humble-moveit-planners-ompl \
+  ros-humble-joint-trajectory-controller \
+  ros-humble-position-controllers \
+  ros-humble-effort-controllers \
+  ros-humble-forward-command-controller \
+  ros-humble-tf2-tools \
+  ros-humble-kdl-parser \
+  ros-humble-joint-limits \
+  ros-humble-rqt \
+  ros-humble-rqt-graph \
+  ros-humble-rqt-joint-trajectory-controller \
+  ros-humble-rqt-controller-manager \
+  ros-humble-rqt-reconfigure \
+  ros-humble-rqt-plot \
+
   vim \
   && sudo rm -rf /var/lib/apt/lists/*
 
