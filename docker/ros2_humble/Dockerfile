@@ -119,6 +119,8 @@ RUN sudo apt-get update && sudo apt-get install -y --no-install-recommends \
   ros-humble-joint-state-publisher \
   ros-humble-joint-state-publisher-gui \
   ros-humble-robot-state-publisher \
+  ros-humble-ros2-control \
+  ros-humble-ros2-controllers \
   vim \
   && sudo rm -rf /var/lib/apt/lists/*
 

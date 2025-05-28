@@ -1,8 +1,9 @@
 moveit_setup_assistant_config:
   urdf:
-    package: so_arm_urdf
+    package: so_arm_description
     relative_path: urdf/so_arm_urdf.urdf
   srdf:
+    package: so_arm_description
     relative_path: config/so_arm_urdf.srdf
   package_settings:
     author_name: LycheeAI

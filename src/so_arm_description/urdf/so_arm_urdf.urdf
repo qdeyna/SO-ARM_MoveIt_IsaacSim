@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Base.STL" />
+          filename="package://so_arm_description/meshes/Base.STL" />
       </geometry>
       <material
         name="">
@@ -40,7 +40,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Base.STL" />
+          filename="package://so_arm_description/meshes/Base.STL" />
       </geometry>
     </collision>
   </link>
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Rotation_Pitch.STL" />
+          filename="package://so_arm_description/meshes/Rotation_Pitch.STL" />
       </geometry>
       <material
         name="">
@@ -80,7 +80,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Rotation_Pitch.STL" />
+          filename="package://so_arm_description/meshes/Rotation_Pitch.STL" />
       </geometry>
     </collision>
   </link>
@@ -119,7 +119,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Upper_Arm.STL" />
+          filename="package://so_arm_description/meshes/Upper_Arm.STL" />
       </geometry>
       <material
         name="">
@@ -133,7 +133,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Upper_Arm.STL" />
+          filename="package://so_arm_description/meshes/Upper_Arm.STL" />
       </geometry>
     </collision>
   </link>
@@ -172,7 +172,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Lower_Arm.STL" />
+          filename="package://so_arm_description/meshes/Lower_Arm.STL" />
       </geometry>
       <material
         name="">
@@ -186,7 +186,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Lower_Arm.STL" />
+          filename="package://so_arm_description/meshes/Lower_Arm.STL" />
       </geometry>
     </collision>
   </link>
@@ -225,7 +225,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Wrist_Pitch_Roll.STL" />
+          filename="package://so_arm_description/meshes/Wrist_Pitch_Roll.STL" />
       </geometry>
       <material
         name="">
@@ -239,7 +239,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Wrist_Pitch_Roll.STL" />
+          filename="package://so_arm_description/meshes/Wrist_Pitch_Roll.STL" />
       </geometry>
     </collision>
   </link>
@@ -278,7 +278,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Fixed_Jaw.STL" />
+          filename="package://so_arm_description/meshes/Fixed_Jaw.STL" />
       </geometry>
       <material
         name="">
@@ -292,7 +292,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Fixed_Jaw.STL" />
+          filename="package://so_arm_description/meshes/Fixed_Jaw.STL" />
       </geometry>
     </collision>
   </link>
@@ -331,7 +331,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Moving_Jaw.STL" />
+          filename="package://so_arm_description/meshes/Moving_Jaw.STL" />
       </geometry>
       <material
         name="">
@@ -345,7 +345,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://so_arm_urdf/meshes/Moving_Jaw.STL" />
+          filename="package://so_arm_description/meshes/Moving_Jaw.STL" />
       </geometry>
     </collision>
   </link>

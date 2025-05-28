@@ -1,0 +1,15 @@
+planning_pipelines:
+  pipeline_names:
+    - pilz_industrial_motion_planner
+
+pilz_industrial_motion_planner:
+  planning_plugins:
+    - pilz_industrial_motion_planner/CommandPlanner
+    - pilz_industrial_motion_planner/LINPlanner
+    - pilz_industrial_motion_planner/PTPPlanner
+    - pilz_industrial_motion_planner/CIRCPlanner
+
+  default_planner: PTP
+  capabilities: >-
+    pilz_industrial_motion_planner/MoveGroupSequenceAction
+    pilz_industrial_motion_planner/MoveGroupSequenceService 
