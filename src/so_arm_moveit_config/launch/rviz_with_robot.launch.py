@@ -10,16 +10,6 @@ from ament_index_python.packages import get_package_share_directory
 from moveit_configs_utils import MoveItConfigsBuilder
 from launch.event_handlers import OnProcessStart
 
-from launch_ros.parameter_descriptions import ParameterFile
-
-moveit_controllers_yaml = ParameterFile(
-    PathJoinSubstitution([
-        FindPackageShare("so_arm_moveit_config"),
-        "config",
-        "moveit_controllers.yaml"
-    ]),
-    allow_substs=True
-)
 
 def generate_launch_description():
     declared_arguments = []
@@ -33,7 +23,26 @@ def launch_setup(context, *args, **kwargs):
     current_directory = str(current_file_path.parent)
 
     use_sim_time = {"use_sim_time": True}
-    
+
+    moveit_controllers = {
+        "moveit_controller_manager": "moveit_simple_controller_manager/MoveItSimpleControllerManager",
+        "moveit_simple_controller_manager": {
+            "controller_names": ["arm_controller"],
+            "arm_controller": {
+                "action_ns": "follow_joint_trajectory",
+                "type": "FollowJointTrajectory",
+                "default": True,
+                "joints": [
+                    "Elbow",
+                    "Pitch",
+                    "Rotation",
+                    "Wrist_Pitch",
+                    "Wrist_Roll"
+                ]
+            }
+        }
+    }
+
     # Configure MoveIt
     moveit_config = (
         MoveItConfigsBuilder("so_arm_description", package_name="so_arm_moveit_config")
@@ -46,7 +55,6 @@ def launch_setup(context, *args, **kwargs):
             publish_robot_description=True,
             publish_robot_description_semantic=True
         )
-        .trajectory_execution(file_path="config/moveit_controllers.yaml")
         .to_moveit_configs()
     )
 
@@ -77,20 +85,18 @@ def launch_setup(context, *args, **kwargs):
         arguments=["arm_controller", "--controller-manager", "/controller_manager"],
     )
 
+    all_move_group_params = [
+        moveit_config.to_dict(),
+        moveit_controllers,
+        use_sim_time,
+    ]
+
     # Start the actual move_group node/action server
     run_move_group_node = Node(
         package="moveit_ros_move_group",
         executable="move_group",
         output="screen",
-        parameters=[
-            moveit_config.robot_description,
-            moveit_config.robot_description_semantic,
-            moveit_config.robot_description_kinematics,
-            moveit_config.joint_limits,
-            moveit_config.planning_pipelines,
-            moveit_config.trajectory_execution, 
-            use_sim_time,
-        ],
+        parameters=all_move_group_params,
     )
 
     # RViz configuration
@@ -111,6 +117,7 @@ def launch_setup(context, *args, **kwargs):
             moveit_config.robot_description_kinematics,
             moveit_config.joint_limits,
             moveit_config.planning_pipelines
+              #
         ],
     )
 
